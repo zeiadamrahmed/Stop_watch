@@ -1,0 +1,184 @@
+.main-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 24px;
+  height: 100%;
+}
+
+.text {
+  color: #d6ad60;
+}
+/* بدل اما اكتب اللون اكتر من مره ده بيعملها */
+:root {
+  --gold: #d6ad60;
+}
+
+.clock {
+  /* داله بتاخد أكتر من قيمة وترجّع الأصغر فيهم */
+  width: min(270px, 70vw);
+  /* خاصية بتحدد نسبة العرض إلى الارتفاع للعنصر، والمتصفح بيحسب الارتفاع لوحده من العرض */
+  aspect-ratio: 1;
+  border: 7px solid #d6ad60;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  background: radial-gradient(circle, #263b40, #101b20);
+}
+
+/* أرقام الساعة */
+.clock-number {
+  position: absolute;
+  font-size: 19px;
+  font-weight: bold;
+  color: #d6ad60;
+  /* بتوسط ارقام الساعه في النص */
+  transform: translate(-50%, -50%);
+}
+
+.n12 {
+  top: 9%;
+  left: 50%;
+}
+.n1 {
+  top: 15%;
+  left: 70%;
+}
+.n2 {
+  top: 30%;
+  left: 84%;
+}
+.n3 {
+  top: 50%;
+  left: 91%;
+}
+.n4 {
+  top: 70%;
+  left: 84%;
+}
+.n5 {
+  top: 85%;
+  left: 70%;
+}
+.n6 {
+  top: 91%;
+  left: 50%;
+}
+.n7 {
+  top: 85%;
+  left: 30%;
+}
+.n8 {
+  top: 70%;
+  left: 16%;
+}
+.n9 {
+  top: 50%;
+  left: 9%;
+}
+.n10 {
+  top: 30%;
+  left: 16%;
+}
+.n11 {
+  top: 15%;
+  left: 30%;
+}
+
+/* العقارب */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  /* بتخلي العنصر يلف في الدايره */
+  transform-origin: bottom center;
+  border-radius: 10px;
+}
+
+.hour {
+  width: 6px;
+  height: 27%;
+  background: white;
+  z-index: 2;
+}
+
+.minute {
+  width: 4px;
+  height: 36%;
+  background: #d6ad60;
+  z-index: 3;
+}
+
+.second {
+  width: 2px;
+  height: 41%;
+  background: #e65b50;
+  z-index: 4;
+}
+
+/* النقطة اللي في النص */
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #d6ad60;
+  border: 2px solid #101b20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* الساعة الرقمية والتاريخ */
+.digital-time {
+  color: #d6ad60;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  direction: ltr;
+}
+
+.small-muted {
+  color: #b6c2c3;
+  font-size: 15px;
+  text-align: center;
+}
+.hour {
+  position: absolute;
+  right: 40px;
+  margin-top: -110px;
+}
+
+.stop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* توسيط رأسي */
+  align-items: center; /* توسيط أفقي */
+}
+/* عشان السيف يظبط */
+#savedTimes {
+  list-style: none;
+  margin: 15px 0 0;
+  max-height: 120px;
+  /* بتعمل اسكرول لما المحتوي يزيد */
+  overflow-y: auto;
+  color: white;
+}
+
+#savedTimes li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#savedTimes .btn i {
+  font-size: 18px;
+}
+
+#savedTimes .btn {
+  border: none !important;
+  background: transparent !important;
+}
